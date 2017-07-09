@@ -1,0 +1,63 @@
+---
+name: upload
+url: /
+controller: upload
+---
+
+<div class="grid-container">
+    <div class="grid-block pageHeader">
+        <div class="grid-content">
+            <h3>Upload a file</h3>
+        </div>
+        <div class="grid-content shrink">
+            <div class="button link" ui-sref="search" ng-if="!uploading">Search
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="grid-block">
+        <form name="uploadForm" novalidate>
+            <span ng-if="status" class="statusStyle {{statusStyle}} label">{{status}}</span>
+            <div class="grid-block">
+                <div class="grid-content">
+                    <div class="button" ng-change="fillMetadata()" ngf-fix-orientation="true" ngf-select ng-model="uploadData.file" name="file">Select File</div>
+                </div>
+                <div class="grid-content shrink">
+                    <div class="button uploadButton {{uploadForm.$invalid ? 'disabled' : ''}}" ng-disabled="uploadForm.$invalid" ng-click="uploadFile(uploadForm.$valid)" ng-if="!uploading">Upload</div>
+                </div>
+                <div class="grid-content small-12">
+                    <label> Name
+                        <input type="text" ng-model="uploadData.name" required/>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <label> File Type
+                        <p>{{uploadData.fileType | capitalize}}</p>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <label> File Type/Extension
+                        <p>{{uploadData.fileExtension}}</p>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <label> File Size (kB)
+                        <p>{{uploadData.fileSize/1024 | number:0}}</p>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <img ng-if="uploadData.fileType=='image' && !progress" class="preview" ngf-src="uploadData.file" />
+                    <audio ng-if="uploadData.fileType=='audio' && !progress" controls ngf-src="uploadData.file"></audio>
+                    <video ng-if="uploadData.fileType=='video' && !progress" controls ngf-src="uploadData.file"></video>
+                    <round-progress ng-if="progress" max="100" current="progress" color="#007889" bgcolor="#eaeaea" radius="100" stroke="20" responsive="true" duration="800" animation="easeInOutQuart" animation-delay="0"></round-progress>
+
+                </div>
+                <div class="grid-content small-8">
+                    <label> Description
+                        <textarea rows="10" id="description" name="description" ng-model="uploadData.description"></textarea>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

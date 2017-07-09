@@ -1,0 +1,53 @@
+---
+name: details
+url: /details/:id
+controller: search
+---
+<div class="grid-container">
+    <div class="grid-block pageHeader">
+        <div class="grid-content">      
+            <h3>File Details</h3>
+        </div>
+        <div class="grid-content shrink">       
+            <div class="button link {{uploadForm.$invalid ? 'disabled' : ''}}" ng-click="updateDoc()" ng-disabled="uploadForm.$invalid" >Save</div>
+            <div class="button link" ui-sref="search">Close</div>
+        </div>
+    </div>
+    <hr/>
+    <div class="grid-block">
+        <form name="uploadForm" novalidate>
+            <span ng-if="status" class="statusStyle {{statusStyle}} label">{{status}}</span>
+            <div class="grid-block">
+                <div class="grid-content small-12">
+                    <label> Name
+                        <input type="text" ng-model="fileData.name" required/>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <label> File Type
+                        <p>{{fileData.fileType | capitalize}}</p>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <label> File Type/Extension
+                        <p>{{fileData.fileExtension}}</p>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <label> File Size (kB)
+                        <p>{{fileData.fileSize/1024 | number:0}}</p>
+                    </label>
+                </div>
+                <div class="grid-content small-4">
+                    <img ng-if="fileData.fileType=='image'" class="preview" src="{{fileData.fileUrl}}" />
+                    <a href="{{fileData.fileUrl}}">Link to file</a>
+                </div>
+                <div class="grid-content small-8">
+                    <label> Description
+                        <textarea rows="10" id="description" name="description" ng-model="fileData.description"></textarea>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

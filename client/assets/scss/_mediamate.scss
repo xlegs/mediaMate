@@ -1,0 +1,79 @@
+
+.inline-label,
+select#fileType {
+    margin-top: 0.5em;
+}
+
+video {
+    width: 100% !important;
+    height: auto !important;
+}
+
+div.grid-block.pageHeader {
+	background: #eee;
+}
+
+div.button.uploadButton, div.button.link {
+    margin-right: 0;
+}
+
+div.button.link {
+	margin-top: 0.3em;
+}
+span.statusStyle {
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+table {
+    width: 100%;
+    .resetButton {
+    	margin-left: 0.4em;
+    }
+    thead tr:first-of-type {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        background: $primary-color;
+        color: #fff;
+        td:hover {
+        	cursor: pointer;
+        	color: #eee;
+        }
+    }
+    tbody {
+        tr:nth-child(even) {
+            background: #eee;
+        }
+        tr:nth-child(odd) {
+            background: #fff;
+        }
+        tr:hover {
+            cursor: pointer;
+            background: $primary-color;
+            color: #fff;
+        }
+        span {
+        	width: 100%;
+        }
+    }
+    td {
+        padding: 0.3em;
+        line-height: 1.5em;
+       
+    }
+     .deleteButton:hover {
+        	background: $alert-color;
+        	color: #fff;
+        }
+    .st-sort-ascent:before {
+        content: '\25B2';
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+    .st-sort-descent:before {
+        content: '\25BC';
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+}

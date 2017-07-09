@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>mediaMate</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="mediamate"><a class="header-link" href="#mediamate"></a>mediaMate</h1>
+<p><em>Stefan Zecevic (xlegs231@gmail.com)</em> -
+<em>June 2016</em></p>
+<h2 id="introduction"><a class="header-link" href="#introduction"></a>Introduction</h2>
+<p>This app is built on <a href="http://foundation.zurb.com/apps.html">Foundation for Apps</a> (v1.1.0  at the time of writing), a frontend responsive <a href="https://angularjs.org/">AngularJS</a> (v1) framework.</p>
+<p>Web development moves quickly, so keep the above version numbers in mind to avoid compatibility issues (especially with regards to dependencies).</p>
+<p>The files themselves are stored in Amazon S3 while the metadata is stored in CouchDB, which can be run in an Amazon EC2 instance.</p>
+<p>This app is best used on a modern Firefox or Chrome install.</p>
+<h2 id="security-concerns"><a class="header-link" href="#security-concerns"></a>Security Concerns</h2>
+<p>This app is written in javascript. Therefore, any passwords and keys are visible to the client. <strong>Exposing this app to the public can grant anyone read/write access to the CouchDB and S3 servers. Make sure the app is deployed internally.</strong></p>
+<h2 id="development-environment"><a class="header-link" href="#development-environment"></a>Development Environment</h2>
+<p>For mediaMate, we require:</p>
+<ul class="list">
+<li><a href="http://foundation.zurb.com/apps.html">Foundation for Apps</a>: A frontend responsive AngularJS framework<ul class="list">
+<li><a href="http://nodejs.org">Node.js</a>: A JavaScript runtime which includes <code>npm</code> (node package manager)</li>
+<li><a href="http://git-scm.com/downloads">Git</a>: Version Control, but mostly used for cloning repos</li>
+<li><a href="http://gulpjs.com/">Gulp</a>: A JavaScript build system</li>
+<li><a href="http://bower.io">Bower</a>: A package manager for webapps (Tip: Always use <code>bower install &lt;pkg&gt; --save</code>)</li>
+</ul>
+</li>
+</ul>
+<p>Change into the directory.</p>
+<pre class="hljs"><code><span class="hljs-built_in">cd</span> mediaMate</code></pre><p>Install the dependencies. If you&#39;re running Mac OS or Linux, you may need to run <code>sudo npm install</code> instead, depending on how your machine is configured.</p>
+<pre class="hljs"><code>npm install
+bower install</code></pre><p>While you&#39;re working on your project, run:</p>
+<pre class="hljs"><code>npm start</code></pre><p>This will compile the Sass and assemble your Angular app. <strong>Now go to <code>localhost:8080</code> in your browser to see it in action.</strong> When you change any file in the <code>client</code> folder, the appropriate Gulp task will run to build new files.</p>
+<p>To run the compiling process once, without watching any files, use the <code>build</code> command.</p>
+<pre class="hljs"><code>npm start build</code></pre><h3 id="directory-structure"><a class="header-link" href="#directory-structure"></a>Directory Structure</h3>
+<pre class="hljs"><code>mediaMate
+├── bower<span class="hljs-number">_</span>components 
+├── bower.json
+├── build (Compiled app ends up here)
+├── client (The <span class="hljs-keyword">actual</span> app resides here)
+├── docs
+├── etc
+├── gulpfile.js (Think <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span> as a makefile. Modify <span class="hljs-keyword">this</span> when adding <span class="hljs-keyword">new</span> js/css files)
+├── node<span class="hljs-number">_m</span>odules
+└── <span class="hljs-keyword">package</span>.json</code></pre><pre class="hljs"><code>mediaMate/client
+├── assets
+│   ├── js
+│   │   └── app<span class="hljs-selector-class">.js</span> (All AngularJS <span class="hljs-selector-tag">code</span> is here. All dependencies are imported here, too.)
+│   └── scss (SASS is compiled into css on build)
+│       ├── app<span class="hljs-selector-class">.scss</span> (Imports)
+│       ├── _mediamate<span class="hljs-selector-class">.scss</span> (App styles)
+│       └── _settings<span class="hljs-selector-class">.scss</span> (Foundation settings)
+├── index<span class="hljs-selector-class">.html</span> (Global HTML -- headers/footers)
+└── templates (one per view)
+    ├── <span class="hljs-selector-tag">details</span><span class="hljs-selector-class">.html</span>
+    ├── home<span class="hljs-selector-class">.html</span>
+    └── upload.html</code></pre><p>Upon build, all the js and scss files are concatenated and minified. Angular routes are built, too. The resulting files end up in <code>mediaMate/build</code>.</p>
+<h3 id="foundation-vs-vanilla-angularjs"><a class="header-link" href="#foundation-vs-vanilla-angularjs"></a>Foundation vs Vanilla AngularJS</h3>
+<p>Foundation does many things a little differently compared to vanilla Angular, so refer to the <a href="http://foundation.zurb.com/apps/docs/#!/">Foundation Docs</a>.</p>
+<p>Some pointers:</p>
+<ul class="list">
+<li>Always look for a Bower or npm package of any libraries you need.</li>
+<li>Include new libs/css in the gulpfile (Don&#39;t forget restart the watch/build script).</li>
+<li>The <a href="http://foundation.zurb.com/apps/docs/#!/">Foundation Docs</a> are indispensible. </li>
+<li>Many bower packages are on GitHub. Search those docs and bug reports for answers.</li>
+</ul>
+<h3 id="couchdb"><a class="header-link" href="#couchdb"></a>CouchDB</h3>
+<p>If you&#39;re not already familiar with CouchDB, start by installing it on your local machine before moving on to a cloud deployment.</p>
+<h4 id="web-interface"><a class="header-link" href="#web-interface"></a>Web Interface</h4>
+<p>The CouchDB WebUI is useful for learning and configuring CouchDB. </p>
+<p>On a local install, access it at <a href="http://localhost:5984/_utils">http://localhost:5984/_utils</a>.</p>
+<p>The cloud deployment uses a different URL.</p>
+<h4 id="the-couchdb-api"><a class="header-link" href="#the-couchdb-api"></a>The CouchDB API</h4>
+<p>CouchDB is a NoSQL datastore. Basically, the client (mediaMate) sends an HTTP request and CouchDB returns a JSON document. The <a href="http://docs.couchdb.org/en/1.6.1/intro/api.html">CouchDB API</a> is how mediaMate communicates with CouchDB.</p>
+<h4 id="cors"><a class="header-link" href="#cors"></a>CORS</h4>
+<p>In order for mediaMate to work with CouchDB, <a href="https://github.com/pouchdb/add-cors-to-couchdb">CORS must be enabled</a>. </p>
+<p>The config <code>cors/origins: *</code> as seen in CouchDB&#39;s WebUI config page allows <strong>all</strong> IP addresses/domains to send requests. <strong>In a production environment, it is recommended to allow only authorized domains.</strong></p>
+<h4 id="admin-party"><a class="header-link" href="#admin-party"></a>Admin Party</h4>
+<p>By default, CouchDB allows anonymous admin access. On a local CouchDB install for dev purposes, this is fine. Production deployments of mediaMate should be <a href="https://cwiki.apache.org/confluence/display/COUCHDB/Securing+CouchDB">secured</a>.</p>
+<h4 id="configuring-mediamate"><a class="header-link" href="#configuring-mediamate"></a>Configuring mediaMate</h4>
+<p>In the declaration of <code>appSettings</code> in <code>app.js</code>, change the value of <code>db</code> to <code>http://&lt;user&gt;:&lt;password&gt;@&lt;address&gt;/mediamate</code>. </p>
+<p>Make sure a <code>mediamate</code> database exists on the server.</p>
+<p>For servers with anonymous admin access, <code>&lt;user&gt;:&lt;password&gt;</code> is not needed.</p>
+<h2 id="deploying-to-amazon-web-services-aws-"><a class="header-link" href="#deploying-to-amazon-web-services-aws-"></a>Deploying to Amazon Web Services (AWS)</h2>
+<p>This app is deployed to <a href="https://aws.amazon.com/">Amazon Web Services</a>. An account is required. New accounts can deploy this app free for a year on Amazon&#39;s <a href="https://aws.amazon.com/free/">free tier</a>.</p>
+<p>After you create an account, <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSAccounts.html">create an IAM user</a>. This will be important later.</p>
+<h3 id="file-storage-aws-s3"><a class="header-link" href="#file-storage-aws-s3"></a>File Storage: AWS S3</h3>
+<p>Create a bucket with the name of your choice.</p>
+<h4 id="configuring-mediamate-1"><a class="header-link" href="#configuring-mediamate-1"></a>Configuring mediaMate</h4>
+<p>In the declaration of <code>appSettings</code> in <code>app.js</code>, change the values as appropriate:</p>
+<ul class="list">
+<li><strong>s3</strong>: <code>https://&lt;bucket_name&gt;.s3.amazonaws.com/</code><ul class="list">
+<li><em>Note:</em>: You can point an external domain or subdomain to the s3 bucket, and use that URL instead.</li>
+</ul>
+</li>
+<li><strong>s3Bucket</strong>: <code>&lt;bucket_name&gt;</code></li>
+<li><strong>s3Url</strong>: <code>https://s3-&lt;region_name&gt;.amazonaws.com/&lt;bucket_name&gt;/</code><ul class="list">
+<li>The region name can be found in the URL when viewing your bucket on <code>console.aws.amazon.com</code>.</li>
+</ul>
+</li>
+<li><strong>accessKey</strong>: Instructions for creating the access and secret keys are <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html">here</a>.</li>
+<li><strong>secretKey</strong>: See above</li>
+<li><strong>policy</strong>: See next section</li>
+<li><strong>signature</strong>: See above</li>
+</ul>
+<p>In the <code>search</code> controller the line:</p>
+<pre class="hljs"><code>AWS.<span class="hljs-built_in">config</span>.region = <span class="hljs-string">'XXXXXXXX'</span>;</code></pre><p>should be filled appropriately.</p>
+<h5 id="obtaining-the-policy-and-signature"><a class="header-link" href="#obtaining-the-policy-and-signature"></a>Obtaining the Policy and Signature</h5>
+<ol class="list">
+<li>Go to <a href="https://angular-file-upload.appspot.com/">this page</a> and scroll to the bottom.</li>
+<li>Click on the button marked <code>S3 Policy Signing Helper</code></li>
+<li>Enter your AWS Secret Key</li>
+<li>Enter the JSON policy:<pre class="hljs"><code>{
+<span class="hljs-attr">"expiration"</span>: <span class="hljs-string">"2020-01-01T00:00:00Z"</span>,
+<span class="hljs-attr">"conditions"</span>: [
+ {<span class="hljs-attr">"bucket"</span>: &lt;bucket_name&gt;},
+ [<span class="hljs-string">"starts-with"</span>, <span class="hljs-string">"$key"</span>, <span class="hljs-string">""</span>],
+ {<span class="hljs-attr">"acl"</span>: <span class="hljs-string">"private"</span>},
+ [<span class="hljs-string">"starts-with"</span>, <span class="hljs-string">"$Content-Type"</span>, <span class="hljs-string">""</span>],
+ [<span class="hljs-string">"starts-with"</span>, <span class="hljs-string">"$filename"</span>, <span class="hljs-string">""</span>],
+ [<span class="hljs-string">"content-length-range"</span>, <span class="hljs-number">0</span>, <span class="hljs-number">524288000</span>]
+]
+}</code></pre></li>
+<li>Click <code>Sign</code></li>
+<li>The policy and signature will appear above the button marked <code>S3 Policy Signing Helper</code>.</li>
+</ol>
+<h3 id="bucket-policy-and-cors-on-s3"><a class="header-link" href="#bucket-policy-and-cors-on-s3"></a>Bucket Policy and CORS on S3</h3>
+<p>Make sure that you provide upload and CORS post to your bucket at AWS -&gt; S3 -&gt; <code>&lt;bucket_name&gt;</code> -&gt; Properties -&gt; Permissions -&gt; Edit bucket policy and Edit CORS Configuration.</p>
+<h4 id="bucket-policy"><a class="header-link" href="#bucket-policy"></a>Bucket Policy</h4>
+<pre class="hljs"><code>{
+    <span class="hljs-attr">"Id"</span>: <span class="hljs-string">"Policy1462899912644"</span>,
+    <span class="hljs-attr">"Version"</span>: <span class="hljs-string">"2012-10-17"</span>,
+    <span class="hljs-attr">"Statement"</span>: [{
+        <span class="hljs-attr">"Sid"</span>: <span class="hljs-string">"Stmt1462899909973"</span>,
+        <span class="hljs-attr">"Action"</span>: [
+            <span class="hljs-string">"s3:DeleteObject"</span>,
+            <span class="hljs-string">"s3:PutObject"</span>
+        ],
+        <span class="hljs-attr">"Effect"</span>: <span class="hljs-string">"Allow"</span>,
+        <span class="hljs-attr">"Resource"</span>: <span class="hljs-string">"arn:aws:s3:::&lt;bucket_name&gt;/*"</span>,
+        <span class="hljs-attr">"Principal"</span>: {
+            <span class="hljs-attr">"AWS"</span>: [
+                <span class="hljs-string">"&lt;user_arn&gt;"</span>
+            ]
+        }
+    }, {
+        <span class="hljs-attr">"Sid"</span>: <span class="hljs-string">"AddPerm"</span>,
+        <span class="hljs-attr">"Effect"</span>: <span class="hljs-string">"Allow"</span>,
+        <span class="hljs-attr">"Principal"</span>: <span class="hljs-string">"*"</span>,
+        <span class="hljs-attr">"Action"</span>: [<span class="hljs-string">"s3:GetObject"</span>],
+        <span class="hljs-attr">"Resource"</span>: [<span class="hljs-string">"arn:aws:s3:::&lt;bucket_name&gt;/*"</span>]
+    }]
+}</code></pre><p><code>&lt;user_arn&gt;</code> can be found at AWS -&gt; IAM -&gt; Users -&gt; <code>&lt;iam_user&gt;</code>.</p>
+<h4 id="cors-configuration"><a class="header-link" href="#cors-configuration"></a>CORS Configuration</h4>
+<pre class="hljs"><code><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">CORSConfiguration</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://s3.amazonaws.com/doc/2006-03-01/"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">CORSRule</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AllowedOrigin</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">AllowedOrigin</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AllowedMethod</span>&gt;</span>POST<span class="hljs-tag">&lt;/<span class="hljs-name">AllowedMethod</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AllowedMethod</span>&gt;</span>GET<span class="hljs-tag">&lt;/<span class="hljs-name">AllowedMethod</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AllowedMethod</span>&gt;</span>HEAD<span class="hljs-tag">&lt;/<span class="hljs-name">AllowedMethod</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AllowedMethod</span>&gt;</span>DELETE<span class="hljs-tag">&lt;/<span class="hljs-name">AllowedMethod</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">MaxAgeSeconds</span>&gt;</span>3000<span class="hljs-tag">&lt;/<span class="hljs-name">MaxAgeSeconds</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">AllowedHeader</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">AllowedHeader</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">CORSRule</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">CORSConfiguration</span>&gt;</span></code></pre><p>The line <code>&lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;</code> allows <strong>all</strong> IP addresses/domains to send requests. <strong>In a production environment, it is recommended to allow only authorized domains.</strong></p>
+<h3 id="metadata-storage-turnkey-amazon-ec2-and-couchdb"><a class="header-link" href="#metadata-storage-turnkey-amazon-ec2-and-couchdb"></a>Metadata Storage: TurnKey, Amazon EC2, and CouchDB</h3>
+<p><a href="https://hub.turnkeylinux.org/">TurnKey Linux Hub</a> allows for easy deployment of ready-made EC2 images.</p>
+<p>Create an account and link it to your AWS account. </p>
+<p>Launch a new TurnKey CouchDB appliance. A T2.Micro instance is plenty. </p>
+<p>Configuration is identical to the above CouchDB instructions but with 2 exceptions:</p>
+<ul class="list">
+<li>The WebUI runs on port 80</li>
+<li>A domain should point to the Couch server.</li>
+</ul>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,592 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"addre",
+				"address"
+			],
+			[
+				"clog",
+				"console.log()"
+			],
+			[
+				"s",
+				"status"
+			],
+			[
+				"a",
+				"accordion"
+			],
+			[
+				"sm",
+				"small"
+			],
+			[
+				"sp",
+				"span"
+			],
+			[
+				"ani",
+				"animationOut"
+			],
+			[
+				"we",
+				"weights"
+			],
+			[
+				"A",
+				"Array	Array.new(10) { |i| .. }"
+			],
+			[
+				"gr",
+				"graph"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"i",
+				"id	Attr"
+			],
+			[
+				"ba",
+				"bacon"
+			],
+			[
+				"di",
+				"display:   (property)"
+			],
+			[
+				"p",
+				"path"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "docs/documentation.md",
+			"settings":
+			{
+				"buffer_size": 9017,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/assets/js/app.js",
+			"settings":
+			{
+				"buffer_size": 10845,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 725.0
+	},
+	"console":
+	{
+		"height": 176.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/docs/documentation.html/documentation.html",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/readme.md",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/index.html",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/templates/upload.html",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/assets/js/app.js",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/docs/policy.json",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/assets/scss/_settings.scss",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/bower_components/foundation-apps/scss/foundation.scss",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/assets/scss/app.scss",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/assets/scss/_mediamate.scss",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/templates/home.html",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/gulpfile.js",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/bower_components/angular-tooltips/lib/angular-tooltips.scss",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/templates/details.html",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/bower_components/ng-file-upload/ng-file-upload-all.js",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/build/assets/css/app.css",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/build/assets/js/routes.js",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/build/assets/js/foundation.js",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/templates/home1.html",
+		"/home/xlegs/Dropbox/School/Idpd Study/mediaMate/client/assets/scss/_table.scss",
+		"/home/xlegs/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/app.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/itineraryView.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/airports.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/currency.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/names.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/merge.rb",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/merged.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/classes.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_jetstream.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/gulpfile.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_settings.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/index.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/modernizr-custom.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/bower_components/DatePicker/src/js/BzmDatePickerMod.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/airlines.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/flightModal.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/formFlight.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/db/aircraft.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/formLeg.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/logos/logos.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/home.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/itineraryForm.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/templates/share.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/bower_components/qrcode-generator/js/qrcode.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/nb-modernizr.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/bower_components/angucomplete-alt/angucomplete-alt.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/app.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_bzm-datepicker.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/node_modules/timezonecomplete/README.md",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/FormCtrl.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/FlightCtrl.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/HomeCtrl.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/globalData.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/js/app.js.old",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/bower_components/fzn-angular-datepicker/js/datepicker.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_datepicker.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/bower_components/DatePicker/src/scss/bzm-datepicker.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/logos/ac.svg",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/build/assets/css/app.css",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_angular-pickadate.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/bower_components/angularjs-datepicker/src/js/angular-datepicker.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_angular-datepicker.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/client/assets/scss/_webfonts.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream-ng/build/index.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/scss/_jetstream.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/index.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/templates/home.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/templates/formFlight.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/templates/itineraryView.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/templates/itineraryForm.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/gulpfile.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/scss/_settings.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/js/app.js",
+		"/home/xlegs/.config/sublime-text-3/Packages/User/cl.sublime-snippet",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/templates/formLeg.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/db/flights_seed.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/node_modules/timezonecomplete/README.md",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/js/functions.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/scss/_angucomplete-alt.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/scss/app.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/scss/_angular-datepicker.scss",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/db/airports_final.csv",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/partials/formFlight.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/templates/flight.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/package.json",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/partials/flight-partial.html",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/build/assets/js/routes.js",
+		"/home/xlegs/Dropbox/web/itinerary/jetstream/client/assets/js/controllers.js",
+		"/home/xlegs/Dropbox/web/btdt/foundation-compass-template-master/scss/foundation/components/_global.scss",
+		"/home/xlegs/Dropbox/web/btdt/foundation-compass-template-master/scss/normalize.scss",
+		"/home/xlegs/Dropbox/web/btdt/foundation-compass-template-master/scss/foundation.scss",
+		"/home/xlegs/Dropbox/web/btdt/foundation-compass-template-master/scss/btdt.scss",
+		"/home/xlegs/Dropbox/web/btdt/foundation-compass-template-master/scss/app.scss",
+		"/home/xlegs/Dropbox/web/btdt/foundation-compass-template-master/scss/_settings.scss",
+		"/home/xlegs/Dropbox/web/btdt/public_html/css/main.old.css",
+		"/home/xlegs/Dropbox/Work/gcc/README",
+		"/home/xlegs/Dropbox/web/diz/design.php",
+		"/home/xlegs/Dropbox/Work/gcc/4.2.3/SCUDC/setup/setup.sh",
+		"/home/xlegs/Dropbox/web/diz/projects.php",
+		"/home/xlegs/Dropbox/web/diz/proj_oval.php",
+		"/home/xlegs/Dropbox/web/btdt/public_html/css/main.css",
+		"/home/xlegs/Dropbox/web/pvt/sass/site/primary/_footer.scss",
+		"/home/xlegs/Dropbox/web/pvt/footer.php",
+		"/home/xlegs/Dropbox/web/pvt/functions.php",
+		"/home/xlegs/Dropbox/web/pvt/header.php",
+		"/home/xlegs/Dropbox/web/pvt/sass/navigation/_menus.scss",
+		"/home/xlegs/Dropbox/web/pvt/sass/typography/_headings.scss",
+		"/home/xlegs/Dropbox/web/pvt/sass/site/secondary/_widgets.scss",
+		"/home/xlegs/Dropbox/web/pvt/sass/variables-site/_structure.scss",
+		"/home/xlegs/Dropbox/web/pvt/sass/elements/_elements.scss",
+		"/home/xlegs/Dropbox/web/pvt/js/navigation.js",
+		"/home/xlegs/Dropbox/web/pvt/sass/site/primary/_comments.scss",
+		"/home/xlegs/Dropbox/web/pvt/sass/navigation/_links.scss",
+		"/home/xlegs/Dropbox/web/pvt/sass/layout/_content-sidebar.scss",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/1.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Automata-Chua.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Automata1.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Catastrophe-Theory.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Catastrophy-Theory.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Chaos-Information.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals-Architecture.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals-Music.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals1.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals2.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals3.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals4.lyx",
+		"/home/xlegs/Dropbox/Misc/Aesthetics Book/Fix it LyX it/Fractals5.lyx"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 196.0,
+		"where_history":
+		[
+			"/home/xlegs/Dropbox/web/pvt/sass/",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"mediamate",
+			"In a production environment",
+			"In a production environment, it is reccommended to allow only authorized domains.\n",
+			"mediamate",
+			"'",
+			",",
+			"mediamate",
+			"Upload",
+			"s3",
+			"fileData.fileUrl",
+			"Data.file\"",
+			"ngf-src=\"fileData.file\"",
+			"angular-file-upload",
+			"<div tooltips tooltip-template=\"{{rows.value.description}}\">",
+			"empty",
+			"</span>",
+			"span ",
+			"td tooltips tooltip-template=\"{{rows.value.description}}\"",
+			" tooltip-smart=\"true\" ",
+			"ui-sref=\"details({id: rows.id})\"",
+			"\"",
+			"./",
+			".min",
+			"css",
+			"ui-router-extras",
+			"details",
+			"uploadData",
+			"ng-click=\"detailModal(rows.id)\"",
+			" zf-close=\"\"",
+			"post",
+			"doc",
+			"fileData",
+			"$scope.",
+			" -->",
+			"!-- ",
+			"ModalFactory",
+			"modal",
+			"search",
+			"id",
+			"modal",
+			"upload",
+			"3",
+			"\n        ",
+			"block",
+			"sea",
+			"displayed",
+			"searchData",
+			"search",
+			"displayedData",
+			"class=\"input-sm form-control\"",
+			"fileType",
+			"strictSelectValue",
+			"search for",
+			"upload",
+			"Type",
+			"}\n",
+			"table",
+			"tablr",
+			"name",
+			"Collection",
+			"table",
+			"1",
+			"rows.",
+			"home",
+			"p",
+			"h3",
+			"span",
+			"p",
+			"name=\"attribute\"",
+			"label",
+			"audio",
+			"content",
+			"Filere",
+			"<label> file",
+			"model",
+			"getTagType",
+			"ngfBlobUrl",
+			"$ngfBlobUrl",
+			"size",
+			"src",
+			"20",
+			"*",
+			"div",
+			"file",
+			"ng-model=\"",
+			"Image",
+			"12",
+			"></textarea>",
+			"textarea ",
+			"<textarea",
+			"Extension",
+			"Type",
+			"escription",
+			"\"name\"",
+			"name",
+			"search",
+			"block",
+			" medium",
+			"/",
+			"Foundation for Apps",
+			"span",
+			"urrency",
+			"airports",
+			"[ity.id]",
+			"airports",
+			"destinations",
+			"airports",
+			",",
+			"angucomplete-alt",
+			"date-picker",
+			"<input",
+			"input",
+			"angucomplete-alt",
+			"x",
+			"success",
+			"scope.bindevent",
+			"cope.onclick",
+			"start",
+			"moused",
+			"picker.on",
+			"t",
+			"odernizr",
+			"modernizr.touch",
+			"Modernizr",
+			"ff",
+			"scope.",
+			"2px",
+			"forms"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"<i class=\"fa fa-chevron-right\"></i>",
+			"<i class=\"fa fa-chevron-left\"></i>",
+			"$mobile_breakpoint",
+			"Phoenix"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "docs/documentation.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1972,
+								1972
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Cobalt.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/assets/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10845,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Cobalt.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 38.0
+	},
+	"pinned_build_system": "",
+	"project": "mediaMate.sublime-project",
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/web/itinerary/jetstream-ng/jetstream.sublime-project"
+			]
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
